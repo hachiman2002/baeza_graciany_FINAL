@@ -1,0 +1,23 @@
+{% extends 'core/base.html' %}
+
+{% load static %}
+
+{% block title %}Formulario Instituciones{% endblock %}
+
+{% block content %}
+<div class="container">
+    <a href="{% url 'core:index' %}" class="btn btn-info mb-4 text-white"><i class="bi bi-house-door"></i> Ir a inicio</a>
+    <style>.errorlist{color:red;}</style>
+    <div class="row mt-3">
+        <div class="col-md-9 mx-auto shadow p-3">
+            <h1 class="text-center">Ingresa una nueva Institucion</h1>
+                <form action="" method="post" enctype="multipart/form-data" novalidate>{% csrf_token %}
+                    {{ form.as_p }}
+                    <div class="text-center">
+                        <input type="submit" value="Ingresar Institucion" class="col-12 btn btn-info btn-block mb-5"/>
+                    </div>
+                </form>
+        </div>
+    </div>
+</div>
+{% endblock %}
