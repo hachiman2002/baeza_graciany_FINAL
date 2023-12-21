@@ -78,7 +78,6 @@ WSGI_APPLICATION = 'baeza_graciany_FINAL.wsgi.application'
 import pymysql
 pymysql.install_as_MySQLdb()
 
-#EDINSON MARICON TRAGA SABLES, AQUI TENI QUE PONER TUS CREDENCIALES
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
